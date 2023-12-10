@@ -1,0 +1,22 @@
+.category-thumb {
+    width: 52px;
+    height: 52px;
+    margin: 0.5em;
+}
+.category-area {
+    padding: 1em;
+    text-align: center;
+}
+
+.home-favorite-store {
+    text-align: left;
+}
+
+.home-search-box {
+    margin-right: 0.5em;
+}
+
+.search-area {
+    padding: 0.2em;
+    text-align: center;
+}

@@ -1,0 +1,29 @@
+.menu-detail-main {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.menu-main-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+.menu-detail-price-label {
+    text-align: left;
+}
+.menu-detail-menu-quantity-label {
+    text-align: left;
+}
+.menu-detail-menu-quantity {
+    text-align: right;
+}
+.menu-detail-menu-quantity-select {
+    text-align: right;
+}
+.menu-detail-cart-btn-area {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+}
+.menu-detail-cart-btn {
+    width: 95%;
+}

@@ -1,0 +1,17 @@
+.store-item {
+    margin-bottom: 1em;
+}
+.store-item-thumb {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 5px;
+}
+.store-item-menu-name {
+    text-align: left;
+}
+.store-item-delivery-time {
+    text-align: right;
+}
+.store-item-item-count {
+    font-size: 18px;
+}

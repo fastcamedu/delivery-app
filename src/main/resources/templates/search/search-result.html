@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/search-top.css"/>
+    <link rel="stylesheet" href="/css/search-form.css"/>
+    <link rel="stylesheet" href="/css/common/store-item.css">
+    <title>검색</title>
+</head>
+<body>
+
+<form class="form search-form" method="get" action="/search">
+    <!-- 상단 헤드 -->
+    <header class="navbar navbar-expand-md sticky-top navbar-dark bg-white header-padding">
+
+        <button type="button" class="btn header-back-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+        </button>
+        <input type="text" class="form-control search-keyword-input w-50" name="searchKeyword" th:value="${keyword}">
+        <button class="btn btn-primary search-btn" type="submit">검색</button>
+    </header>
+</form>
+
+<!-- 컨텐츠 -->
+<main class="container-fluid search-form-main">
+
+    <div class="row" th:each="store: ${stores}">
+        <!-- 매장 -->
+        <div class="store-item">
+            <a th:href="|/display/stores/${store.storeId}|"><img src="/images/food1.png" alt="food" class="store-item-thumb rounded"></a>
+            <div class="row">
+                <div class="col-6 store-item-menu-name"><span th:text="${store.storeName}"></span></div>
+                <div class="col-6 store-item-delivery-time"><span th:text="|${store.deliveryTime}|"></span></div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 store-item-menu-name"><span th:text="|평점: ${store.reviewGrade}|"></span></div>
+                <div class="col-6 store-item-delivery-time"><span th:text="|배달비 ${#numbers.formatInteger(store.deliveryFee,1,'COMMA')}원|"></span></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="/js/search-form/search-result.js"></script>
+</body>
+</html>

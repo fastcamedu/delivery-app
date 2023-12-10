@@ -1,0 +1,20 @@
+.store-hero-image-area {
+    text-align: center;
+}
+.store-main-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+.menu-thumbnail {
+    width: 7rem;
+}
+.store-detail-menu {
+    margin-bottom: 0.5rem;
+}
+.menu-name {
+    font-size: 18px;
+}
+.menu-price {
+    font-size: 16px;
+}

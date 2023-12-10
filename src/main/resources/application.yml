@@ -1,0 +1,24 @@
+spring:
+  devtools:
+    livereload:
+      enabled: true
+
+server:
+  port: 8080
+
+apis:
+  delivery-api:
+    host: http://localhost:8081/apis
+    cart: /carts
+    search: /search
+    cart-item: /carts/items
+    category:
+      stores: /categories/stores
+    store-detail: /display/stores/
+    menu-detail: /display/menus/
+    signup: /customer/signup
+    customer: /customers
+    checkout: /checkouts
+    order-history: /order-histories
+    home:
+      recent-order: /home/favorite-stores

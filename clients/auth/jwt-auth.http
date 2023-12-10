@@ -1,0 +1,16 @@
+### Hello
+GET http://localhost:8080/api/user/hello
+
+### JWT 인증
+POST http://localhost:8080/api/auth
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "1111"
+}
+
+### 장바구니 API 테스트
+GET http://localhost:8080/cart
+Authorization: Bearer [JWT 토큰]
+

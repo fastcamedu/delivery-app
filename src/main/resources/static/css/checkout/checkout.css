@@ -1,0 +1,10 @@
+.order-price-area {
+    text-align: right;
+}
+.payment-btn-area {
+    text-align: center;
+}
+.payment-btn {
+    width: 95%;
+    margin-bottom: 1rem;
+}

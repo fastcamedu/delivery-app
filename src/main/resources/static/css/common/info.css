@@ -1,0 +1,7 @@
+.info-box {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 0.1rem solid #ccc;
+    margin-bottom: 1rem;
+    min-height: 6rem;
+}

@@ -1,0 +1,30 @@
+.container-fluid {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.logo-image {
+    width: 80%;
+}
+.login-form-main {
+    padding: 0.5rem;
+}
+.td-label {
+    width: 40%;
+    text-align: left;
+}
+.td-input {
+    width: 60%;
+    text-align: left;
+}
+.login-btn-area {
+    width: 100%;
+    text-align: center;
+}
+.login-btn {
+    width: 10rem;
+}
+.signup-link-area {
+    width: 100%;
+    text-align: center;
+}
