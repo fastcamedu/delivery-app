@@ -19,7 +19,6 @@ class HomeController(
     private val homeAdapter: HomeAdapter,
     private val customerAdapter: CustomerAdapter,
 ) {
-
     companion object {
         private val logger = KotlinLogging.logger(this::class.java.name)
     }
