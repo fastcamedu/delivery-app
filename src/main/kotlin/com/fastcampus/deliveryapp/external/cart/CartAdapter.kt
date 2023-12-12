@@ -48,9 +48,12 @@ class CartAdapter(
 
         val httpBody = LinkedMultiValueMap<String, String>()
         val request = HttpEntity(httpBody, headers)
-        val responseEntity = restTemplate.exchange(cartItemFullPath, HttpMethod.GET, request, CartResponse::class.java)
-        return responseEntity.body?.cartItems?.size ?: 0
+
+        return try {
+            val responseEntity = restTemplate.exchange(cartItemFullPath, HttpMethod.GET, request, CartResponse::class.java)
+            responseEntity.body?.cartItems?.size ?: 0
+        } catch (e: Exception) {
+            0
+        }
     }
-
-
 }
